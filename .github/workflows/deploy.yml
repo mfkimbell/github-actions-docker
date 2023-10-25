@@ -11,6 +11,10 @@ jobs:
   test:
     environment: testing
     runs-on: ubuntu-latest
+    container:
+      image: node:16
+      #this env is for variables directly needed by the image
+      #env:
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
       MONGODB_CLUSTER_ADDRESS: cluster0.0mzfhaf.mongodb.net
